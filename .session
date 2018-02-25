@@ -1,0 +1,16 @@
+;;; -*- coding: utf-8; -*-
+;;; Automatically generated on Tue Feb 20 22:51:30 2018
+;;; Invoked by isaac@Isaacs-MBP.fios-router.home using 27.0.50
+(setq-default session-file-alist '(("~/.emacs.d/elpa-27.0/color-theme-20070910.1007/color-theme-autoloads.el" 4841 nil 1 nil nil 4841 (overwrite-mode)) ("~/.emacs.d/custom.el" 1 nil 1 nil nil 2616 (overwrite-mode)) ("~/.emacs.d/lisp/init-locales.el" 847 824 1 nil nil 846 (overwrite-mode)) ("~/Google Drive/Documents/Program/cpp/integral.cpp" 1861 1731 1 nil nil 1861 (overwrite-mode))))
+(setq-default file-name-history '("~/.emacs.d/custom.el" "~/.emacs.d/elpa-27.0/green-phosphor-theme-20150515.747/green-phosphor-theme-autoloads.el" "~/.emacs.d/elpa-27.0/color-theme-20070910.1007/color-theme-autoloads.el" "~/Work/cpp/integral.cpp" #("/Users/isaac/.emacs.d/lisp/init-locales.el" 0 42 (ivy-index 0)) #("/Users/isaac/.emacs.d/init.el" 0 29 (ivy-index 0))))
+(setq-default search-ring '("green" "color-t"))
+(setq-default command-history '((list-packages nil) (desktop-save-mode (quote toggle)) (customize-themes)))
+(setq-default counsel-M-x-history '(#("color-theme" 0 11 (ivy-index 1)) #("list-fa" 0 7 (ivy-index 0)) #("load" 0 4 (ivy-index 1)) #("color-theme-" 0 12 (ivy-index 4)) "color-theme-select" "list-packages" #("color" 0 5 (ivy-index 5)) #("list-pac" 0 8 (ivy-index 0)) #("desktop" 0 7 (ivy-index 6)) #("customize-the" 0 13 (ivy-index 0))))
+(setq-default counsel-git-grep-cmd-history '("git --no-pager grep --full-name -n --no-color -i -e \"%s\""))
+(setq-default ivy-history '("green-phosphor"))
+(setq-default occur-collect-regexp-history '("\\1"))
+(setq-default serial-name-history '("/dev/ttys0"))
+(setq-default serial-speed-history '("9600" "1200" "2400" "4800" "14400" "19200" "28800" "38400" "57600" "115200"))
+(setq-default slime-connect-host-history '("localhost"))
+(setq-default slime-connect-port-history '("4005"))
+(setq-default smex-history '(color-theme-select list-packages desktop-save-mode customize-themes cd ri 5x5))
