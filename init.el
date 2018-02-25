@@ -56,8 +56,8 @@
 ; Let we replace the old word selected by cursor by new word
 (delete-selection-mode t) 
 (global-hl-line-mode t)
-;; let emacs found executable 
-(when (memq window-system '(mac ns x))
+;; let emacs found execuable 
+(when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
