@@ -4,13 +4,14 @@
 (
  ("/Users/isaac/.emacs.d/elpa/color-theme-20070910.1007/" . "themes/")
  ("/Users/isaac/.emacs.d/elpa/" . "color-theme-20070910.1007/")
- ("/Users/isaac/.emacs.d/" . "elpa/")
+ ("/Users/isaac/.emacs.d/" . "lisp/")
  ("/Users/isaac/Work/" . "cpp/")
  ("/Users/isaac/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/isaac/.emacs.d/lisp/"
  "/Users/isaac/Downloads/"
  "/Users/isaac/.emacs.d/"
  "/Users/isaac/Work/cpp/"
@@ -20,6 +21,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-packages.el"
  "xxx.org"
  "init.el"
  "day2.org"
@@ -33,7 +35,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/isaac/.emacs.d/" (23186 22331 457935 219000) ".smex-items" "#init.el#" ".session" "elpa/" ".historian" "recentf" "history" ".#init.el" "init.el" "auto-save-list/" ".uptimes.el" "smex-items" ".DS_Store" "ido.last" "../" "./")
+ ("/Users/isaac/.emacs.d/lisp/" (23187 25236 185006 929000) "init-packages.el" "../" "./")
+
+ ("/Users/isaac/.emacs.d/" (23187 25109 767592 55000) ".smex-items" "#init.el#" ".git/" ".session" "elpa/" ".historian" "recentf" "history" ".gitignore" "init.el" "auto-save-list/" ".uptimes.el" "abbrev_defs" "smex-items" ".DS_Store" "lisp/" "init-packages.el~" "ido.last" "../" "./")
 
  ("/Users/isaac/" (23186 17038 141733 874000) ".viminfo" ".bash_history" ".dropbox-master/" ".cache/" "Downloads/" ".oh-my-zsh/" ".vim_runtime/" ".root_hist" ".swt/" "Documents/" ".Trash/" "Dropbox/" ".emacs~" ".zsh-update" "Applications/" ".vimrc" "Movies/" ".vim_mru_files" "Work/" ".dropbox/" "Public/" ".matlab/" "Google Drive/" ".bash_sessions/" ".cups/" ".emacs.d/" "emacs" ".oracle_jre_usage/" "Library/" "Desktop/" ".zsh_history" "Pictures/" ".local/" ".adobe/" ".zshrc" ".CFUserTextEncoding" ".zcompdump-Isaac’s MacBook Pro-5.3" ".zshrc~" ".DS_Store" "Music/" "../" "./")
 
