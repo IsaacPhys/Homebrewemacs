@@ -1,7 +1,6 @@
 (require 'cl)
-
  ;;---------------------------------------------------------------------------------
- ;; Set Packages
+ ;; Set Melpa Packages
  ;;---------------------------------------------------------------------------------
 (when (>= emacs-major-version 24)
    (require 'package)
@@ -43,6 +42,7 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;; let emacs found execuable
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
@@ -63,7 +63,6 @@
 (global-highlight-parentheses-mode t)
 (electric-pair-mode t)
 ;(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-(require 'smartparens-config)
 (smartparens-global-mode t)
 
 
@@ -106,5 +105,21 @@
  ;;---------------------------------------------------------------------------------
 (require 'popwin)  ;;when require, wh(setq company-minimum-prefix-length 1)en not require
 (popwin-mode t)
+
+
+ ;;---------------------------------------------------------------------------------
+ ;; Helm
+ ;;---------------------------------------------------------------------------------
+(require 'helm-config)
+;(global-set-key (kbd "M-x") 'helm-M-x)
+;(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+
+ ;;---------------------------------------------------------------------------------
+ ;; Auctex Environment Variables
+ ;;---------------------------------------------------------------------------------
+(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))  
+(setq exec-path (append exec-path '("/Library/TeX/texbin/")))
+
 
 (provide 'init-packages)
