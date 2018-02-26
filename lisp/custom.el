@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
- '(company-minimum-prefix-length 1)
+ '(company-minimum-prefix-length 2)
  '(custom-safe-themes
    (quote
     ("d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" default))))
