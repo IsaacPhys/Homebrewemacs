@@ -1,8 +1,8 @@
-;;; cyberpunk-theme.el --- Cyberpunk Color Theme
+;;; homebrew-theme.el --- Homebrew Color Theme
 
 ;; Copyright 2012-2016, Nicholas M. Van Horn
 
-;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
+;; Author: Isaac Ruoquan Wang <hepisaacf@gmail.com>
 ;; Keywords: color theme cyberpunk
 ;; Package-Version: 20170724.924
 ;; Version: 1.19
@@ -80,6 +80,8 @@
       (homebrew-green+3 "#afd8af")
       (homebrew-green+4 "#bfebbf")
       (homebrew-forest-green "#228b22")
+      (homebrew-pale-green "#548b54")
+      (homebrew-spring-green-4 "#008b45")
       (homebrew-cyan "#93e0e3")
       (homebrew-blue+1 "#94bff3")
       (homebrew-blue "#0432ff")    ;; blue
@@ -91,8 +93,11 @@
       (homebrew-blue-6 "#96CBFE")
       (homebrew-blue-7 "#00ffff")
       (homebrew-blue-8 "#4F94CD")
+      (homebrew-medium-blue "#0226cc")
+      (homebrew-sky-bule-1 "#87ceff")
       (homebrew-purple-4 "#5d478b")
       (homebrew-dodger-blue "#1e90ff")
+      (homebrew-dark-blue "#01168a")
       (homebrew-magenta "#dc8cc3")
       (homebrew-black (if (and homebrew-transparent-background
                                 (not (display-graphic-p))
@@ -154,9 +159,12 @@
    `(grep-match-face ((,class (:foreground ,homebrew-black :background ,homebrew-pink-1))))
    `(match ((,class (:background ,homebrew-black :foreground ,homebrew-pink-1))))
 
+  
 
+  
+   
    ;;; ivy
-   '(ivy-current-match ((t (:background "dark red" :foreground "black"))))
+   `(ivy-current-match ((t (:background "dark red" :foreground "black")))) 
 
 
    ;;; multiple-cursors
@@ -183,11 +191,12 @@
    `(mode-line-inactive
      ((,class (:foreground ,homebrew-dark-green
                            :background ,homebrew-bg
-                           :box (:line-width 1 :color ,homebrew-forest-green)))))
-   `(region ((,class (:background ,homebrew-red-5))))
+                           :box (:line-width 1 :color ,homebrew-dark-green)))))
+   `(region ((,class (:foreground ,homebrew-green-4
+                                  :background ,homebrew-dark-blue))))
    `(secondary-selection ((,class (:background ,homebrew-bg+2))))
    `(trailing-whitespace ((,class (:background ,homebrew-red))))
-   `(vertical-border ((,class (:foreground ,homebrew-gray-5 :background ,homebrew-black))))
+   `(vertical-border ((,class (:foreground ,homebrew-dark-green :background ,homebrew-bg))))
 
    ;;; font lock
    `(font-lock-builtin-face ((,class (:foreground ,homebrew-blue))))
@@ -195,15 +204,15 @@
    ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,homebrew-green)))) 
    `(font-lock-constant-face ((,class (:foreground ,homebrew-purple-4))))
    ;; `(font-lock-doc-face ((,class (:foreground ,homebrew-green+1))))
-   `(font-lock-doc-face ((,class (:foreground ,homebrew-green-3))))
+   `(font-lock-doc-face ((,class (:foreground ,homebrew-forest-green))))
    `(font-lock-function-name-face ((,class (:foreground ,homebrew-dodger-blue))))
-   `(font-lock-keyword-face ((,class (:foreground ,homebrew-blue))))
+   `(font-lock-keyword-face ((,class (:foreground ,homebrew-medium-blue))))
    ;; `(font-lock-negation-char-face ((,class (:foreground ,homebrew-fg))))
    `(font-lock-preprocessor-face ((,class (:foreground ,homebrew-gray-3))))
-   `(font-lock-string-face ((,class (:foreground ,homebrew-yellow-2))))
-   `(font-lock-type-face ((,class (:foreground ,homebrew-blue))))
+   `(font-lock-string-face ((,class (:foreground ,homebrew-pale-green))))
+   `(font-lock-type-face ((,class (:foreground ,homebrew-medium-blue))))
    `(font-lock-variable-name-face ((,class (:foreground ,homebrew-green-1))))
-   `(font-lock-warning-face ((,class (:foreground ,homebrew-pink))))
+   `(font-lock-warning-face ((,class (:foreground ,homebrew-dark-red))))
    `(font-lock-reference-face ((,class (:foreground ,homebrew-gray))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,homebrew-yellow-4))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,homebrew-red))))
@@ -249,6 +258,9 @@
    `(font-latex-title-4 ((,class (:inherit variable-pitch :weight bold))))
    `(font-latex-sectioning-0 ((,class (:foreground ,homebrew-blue :background ,homebrew-black :scale 1.5))))
    `(font-latex-sectioning-1 ((,class (:foreground ,homebrew-blue :background ,homebrew-black :scale 1.5))))
+   `(font-latex-sectioning-2-face ((,class (:foreground ,homebrew-green+2))))
+   `(font-latex-math-face ((,class (:foreground ,homebrew-sky-bule-1))))
+   `(font-latex-warning-face ((,class (:foreground ,homebrew-dark-red))))
 
    ;; auto-complete
    `(ac-completion-face ((,class (:background ,homebrew-gray-2 :underline t))))
@@ -262,15 +274,15 @@
    `(window-number-face ((,class (:background ,homebrew-gray-6 :foreground ,homebrew-blue-5))))
 
    ;; company-mode
-   `(company-tooltip ((,class (:background ,homebrew-gray-2 :foreground ,homebrew-yellow))))
+   `(company-tooltip ((,class (:background ,homebrew-gray-2 :foreground ,homebrew-dark-green)))) 
    `(company-tooltip-common ((,class (:inherit company-tooltip :foreground ,homebrew-blue))))
-   `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :foreground ,homebrew-blue))))
-   `(company-tooltip-selection ((,class (:foreground ,homebrew-black :background ,homebrew-pink-1))))
+   `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :foreground ,homebrew-green-3))))
+   `(company-tooltip-selection ((,class (:foreground ,homebrew-green-3 :background ,homebrew-dark-blue))))
    `(company-tooltip-annotation ((,class (:inherit company-tooltip :foreground ,homebrew-black-3))))
    `(company-scrollbar-fg ((,class (:background ,homebrew-black-3))))
    `(company-scrollbar-bg ((,class (:background ,homebrew-gray-5))))
-   `(company-preview ((,class (:foreground ,homebrew-gray :background ,homebrew-pink-1))))
-   `(company-preview-common ((,class (:foreground ,homebrew-gray :background ,homebrew-pink-1))))
+   `(company-preview ((,class (:foreground ,homebrew-gray :background ,homebrew-dark-blue))))
+   `(company-preview-common ((,class (:foreground ,homebrew-gray :background ,homebrew-dark-blue)))) 
    
    ;; diff
    `(diff-added ((,class (:foreground ,homebrew-green))))
@@ -622,13 +634,13 @@
                               :box (:line-width 1 :style none)))))
    `(org-todo ((,class (:bold t :foreground ,homebrew-orange :weight bold
                               :box (:line-width 1 :style none)))))
-   `(org-level-1 ((,class (:foreground ,homebrew-pink-1 :height 1.3))))
-   `(org-level-2 ((,class (:foreground ,homebrew-yellow :height 1.2))))
-   `(org-level-3 ((,class (:foreground ,homebrew-blue-5 :height 1.1))))
-   `(org-level-4 ((,class (:foreground ,homebrew-green))))
+   `(org-level-1 ((,class (:foreground ,homebrew-green-4 :height 1.3))))
+   `(org-level-2 ((,class (:foreground ,homebrew-spring-green-4 :height 1.2))))
+   `(org-level-3 ((,class (:foreground ,homebrew-forest-green :height 1.1))))
+   `(org-level-4 ((,class (:foreground ,homebrew-dark-green))))
    `(org-level-5 ((,class (:foreground ,homebrew-orange))))
    `(org-level-6 ((,class (:foreground ,homebrew-pink))))
-   `(org-level-7 ((,class (:foreground ,homebrew-green+3))))
+   `(org-level-7 ((,class (:foreground ,homebrew-green-1))))
    `(org-level-8 ((,class (:foreground ,homebrew-blue-1))))
    `(org-link ((,class (:foreground ,homebrew-blue-6 :underline t))))
    `(org-tag ((,class (:bold t :weight bold))))
@@ -636,10 +648,16 @@
    `(org-column-title ((,class (:background ,homebrew-bg-1 :underline t :weight bold))))
    `(org-block ((,class (:foreground ,homebrew-fg :background ,homebrew-bg-05))))
    `(org-block-begin-line 
-     ((,class (:foreground "#008ED1" :background ,homebrew-bg-1))))
-   `(org-block-background ((,class (:background ,homebrew-bg-05))))
+     ((,class (:foreground ,homebrew-blue
+                                        ;:background ,homebrew-bg-1
+                           )))
+     )
+  ; `(org-block-background ((,class (:background ,homebrew-gray-5))))
    `(org-block-end-line 
-     ((,class (:foreground "#008ED1" :background ,homebrew-bg-1))))
+     ((,class (:foreground ,homebrew-blue
+                                        ;:background ,homebrew-bg-1
+                           )))
+     )
 
    ;; `(org-deadline-announce ((,class (:foreground ,homebrew-red-1))))
    ;; `(org-scheduled ((,class (:foreground ,homebrew-green+4))))
@@ -812,6 +830,7 @@
    ;; which-func-mode
    `(which-func ((,class (:foreground ,homebrew-green+4))))
 
+  
    ;; yasnippet
    `(yas/field-highlight-face ((,class (:background ,homebrew-pink-1 :foreground ,homebrew-black))))
 

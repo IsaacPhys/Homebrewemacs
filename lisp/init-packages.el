@@ -9,37 +9,40 @@
 
 
  ;;add whatever packages you want here
-(defvar isaac/packages '(
-			 company
-			 auctex
-			 monokai-theme
-			 hungry-delete
-			 color-theme
-			 helm
-			 company-auctex
-			 highlight-parentheses
-			 auto-complete
-			 helm-directory
-			 swiper
-			 counsel
-			 smartparens
-			 js2-mode
-			 nodejs-repl
-			 exec-path-from-shell
-			 popwin
-			 cyberpunk-theme
-			 )  "Default packages")
-(setq package-selected-packages isaac/packages)
+(defvar my/packages '(
+		      ;; --- Auto-completion ---
+		      company
+		      company-auctex
+		      ;; --- Better Editor ---
+		      hungry-delete
+		      swiper
+		      counsel
+		      smartparens
+		      ;; --- Major Mode ---
+		      js2-mode
+		      ;; --- Minor Mode ---
+		      nodejs-repl
+		      exec-path-from-shell
+		      ;; --- Themes ---
+		      monokai-theme
+		      ;; solarized-theme
+		      ;; --- Auctex ---
+		      auctex
+		      ;; --- Neotree ---
+		      neotree
+		      ) "Default packages")
 
-(defun isaac/packages-installed-p ()
-  (loop for pkg in isaac/packages
-        when (not (package-installed-p pkg)) do (return nil)
-        finally (return t)))
+(setq package-selected-packages my/packages)
 
-(unless (isaac/packages-installed-p)
+(defun my/packages-installed-p ()
+  (loop for pkg in my/packages
+	when (not (package-installed-p pkg)) do (return nil)
+	finally (return t)))
+
+(unless (my/packages-installed-p)
   (message "%s" "Refreshing package database...")
   (package-refresh-contents)
-  (dolist (pkg isaac/packages)
+  (dolist (pkg my/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
@@ -109,19 +112,15 @@
 (popwin-mode t)
 
 
- ;;---------------------------------------------------------------------------------
- ;; Helm
- ;;---------------------------------------------------------------------------------
-(require 'helm-config)
-;(global-set-key (kbd "M-x") 'helm-M-x)
-;(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 
  ;;---------------------------------------------------------------------------------
- ;; Auctex Environment Variables
+ ;; Auctex Environment
  ;;---------------------------------------------------------------------------------
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))  
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
+
+
 
 
 (provide 'init-packages)

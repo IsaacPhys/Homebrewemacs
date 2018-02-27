@@ -14,4 +14,6 @@
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+(global-set-key [f8] 'neotree-toggle)
+
 (provide 'init-keybindings)
