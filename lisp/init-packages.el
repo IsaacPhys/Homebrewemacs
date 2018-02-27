@@ -27,6 +27,7 @@
 			 nodejs-repl
 			 exec-path-from-shell
 			 popwin
+			 cyberpunk-theme
 			 )  "Default packages")
 (setq package-selected-packages isaac/packages)
 
@@ -85,8 +86,9 @@
  ;;---------------------------------------------------------------------------------
 (require 'color-theme)
 (color-theme-initialize)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 ;(color-theme-oswald)
-(load-theme 'monokai t)
+(load-theme 'homebrew t)
 
 
  ;;---------------------------------------------------------------------------------
