@@ -87,16 +87,20 @@
       (homebrew-blue "#0432ff")    ;; blue
       (homebrew-blue-1 "#7b68ee")  ;; medium slate blue
       (homebrew-blue-2 "#6a5acd")  ;; slate blue
-      (homebrew-blue-3 "#add8e6")  ;; light blue
-      (homebrew-blue-4 "#b2dfee")  ;; LightBlue2
+      (homebrew-blue-3 "#0226cc")
+      (homebrew-light-blue "#add8e6")  ;; light blue
+      (homebrew-light-blue-2 "#b2dfee")  ;; LightBlue2
       (homebrew-blue-5 "#4c83ff")
       (homebrew-blue-6 "#96CBFE")
       (homebrew-blue-7 "#00ffff")
       (homebrew-blue-8 "#4F94CD")
+      (homebrew-blue-4 "#01168a")
       (homebrew-medium-blue "#0226cc")
       (homebrew-sky-bule-1 "#87ceff")
       (homebrew-purple-4 "#5d478b")
       (homebrew-dodger-blue "#1e90ff")
+      (homebrew-dodger-blue-3 "#1874cd")
+      (homebrew-dodger-blue-4 "#104e8b")
       (homebrew-dark-blue "#01168a")
       (homebrew-magenta "#dc8cc3")
       (homebrew-black (if (and homebrew-transparent-background
@@ -122,7 +126,7 @@
  (custom-theme-set-faces
    'homebrew
    '(button ((t (:underline t))))
-   `(link ((,class (:foreground ,homebrew-dodger-blue :underline t :weight bold))))
+   `(link ((,class (:foreground ,homebrew-blue-3 :underline t :weight bold))))
    `(link-visited ((,class (:foreground ,homebrew-purple-4 :underline t :weight normal))))
    `(blue ((,class (:foreground ,homebrew-blue))))
    `(bold ((,class (:bold t))))
@@ -134,7 +138,7 @@
    `(cursor ((,class (:background ,homebrew-fg))))
    `(escape-glyph-face ((,class (:foreground ,homebrew-red))))
    ;; `(fringe ((,class (:foreground ,homebrew-fg :background ,homebrew-bg+1))))
-   `(header-line ((,class (:foreground ,homebrew-yellow
+   `(header-line ((,class (:foreground ,homebrew-blue
                                        :background ,homebrew-bg-1
                                        :box (:line-width -1 :style released-button)))))
    `(highlight ((,class (:background ,homebrew-gray-5))))
@@ -171,7 +175,7 @@
    `(mc/cursor-face ((,class (:inverse-video nil, :background ,homebrew-pink :foreground ,homebrew-black))))
 
    ;; faces used by isearch
-   `(isearch ((,class (:foreground ,homebrew-black :background ,homebrew-pink-1))))
+   `(isearch ((,class (:foreground ,homebrew-dark-green :background ,homebrew-dark-blue))))
    `(isearch-fail ((,class (:background ,homebrew-red-1))))
    
    `(lazy-highlight ((,class (:foreground ,homebrew-black :background ,homebrew-yellow))))
@@ -411,7 +415,7 @@
    `(gnus-group-news-2-empty ((,class (:foreground ,homebrew-green+3))))
    `(gnus-group-news-3-empty ((,class (:foreground ,homebrew-green+1))))
    `(gnus-group-news-4-empty ((,class (:foreground ,homebrew-blue-2))))
-   `(gnus-group-news-5-empty ((,class (:foreground ,homebrew-blue-3))))
+   `(gnus-group-news-5-empty ((,class (:foreground ,homebrew-light-blue))))
    `(gnus-group-news-6-empty ((,class (:foreground ,homebrew-bg+2))))
    `(gnus-group-news-low-empty ((,class (:foreground ,homebrew-bg+2))))
    `(gnus-signature ((,class (:foreground ,homebrew-yellow))))
@@ -500,7 +504,7 @@
    ;; magit popup
    `(magit-popup-heading             ((t (:foreground ,homebrew-pink-1  :weight bold))))
    `(magit-popup-key                 ((t (:foreground ,homebrew-blue+1 :weight bold))))
-   `(magit-popup-argument            ((t (:foreground ,homebrew-blue-4   :weight bold))))
+   `(magit-popup-argument            ((t (:foreground ,homebrew-light-blue-2   :weight bold))))
    `(magit-popup-disabled-argument   ((t (:foreground ,homebrew-fg    :weight normal))))
    `(magit-popup-option-value        ((t (:foreground ,homebrew-blue-2  :weight bold))))
    ;; ;; magit process
@@ -527,7 +531,7 @@
    `(magit-blame-hash    ((t (:background ,homebrew-bg+1 :foreground ,homebrew-green))))
    `(magit-blame-name    ((t (:background ,homebrew-bg+1 :foreground ,homebrew-pink-1))))
    `(magit-blame-date    ((t (:background ,homebrew-bg+1 :foreground ,homebrew-yellow-1))))
-   `(magit-blame-summary ((t (:background ,homebrew-bg+1 :foreground ,homebrew-blue-4
+   `(magit-blame-summary ((t (:background ,homebrew-bg+1 :foreground ,homebrew-light-blue-2
                                           :weight bold))))
    ;; ;; magit references etc
    `(magit-dimmed         ((t (:foreground ,homebrew-bg+3))))
@@ -619,8 +623,8 @@
    `(mumamo-background-chunk-submode4 ((,class (:background ,homebrew-bg+1))))
 
    ;; org-mode
-   `(org-document-title ((,class (:foreground ,homebrew-blue-3 :background ,homebrew-black :weight bold :height 1.5))))
-   `(org-document-info ((,class (:foreground ,homebrew-blue-3 :background ,homebrew-black :weight bold))))
+   `(org-document-title ((,class (:foreground ,homebrew-light-blue :background ,homebrew-black :weight bold :height 1.5))))
+   `(org-document-info ((,class (:foreground ,homebrew-light-blue :background ,homebrew-black :weight bold))))
    `(org-document-info-keyword ((,class (:foreground ,homebrew-gray-2 :background ,homebrew-black))))
    `(org-agenda-date-today
      ((,class (:foreground ,homebrew-orange-2 :slant italic :weight bold))) t)
@@ -683,10 +687,10 @@
    `(outline-1 ((,class (:inherit outline-2 :height 1.0))))
 
    ;; emms
-   `(emms-browser-year/genre-face ((,class (:foreground ,homebrew-blue-3 :height 1.0))))
+   `(emms-browser-year/genre-face ((,class (:foreground ,homebrew-light-blue :height 1.0))))
    `(emms-browser-artist-face ((,class (:foreground ,homebrew-pink-1 :height 1.0))))
-   `(emms-browser-composer-face ((,class (:foreground ,homebrew-blue-3 :height 1.0))))
-   `(emms-browser-performer-face ((,class (:foreground ,homebrew-blue-3 :height 1.0))))
+   `(emms-browser-composer-face ((,class (:foreground ,homebrew-light-blue :height 1.0))))
+   `(emms-browser-performer-face ((,class (:foreground ,homebrew-light-blue :height 1.0))))
    `(emms-browser-album-face ((,class (:foreground ,homebrew-yellow :height 1.0))))
    `(emms-browser-track-face ((,class (:foreground ,homebrew-blue-5 :height 1.0))))
 
@@ -720,7 +724,7 @@
    `(rainbow-delimiters-depth-3-face ((,class (:foreground ,homebrew-pink-1))))
    `(rainbow-delimiters-depth-4-face ((,class (:foreground ,homebrew-yellow))))
    `(rainbow-delimiters-depth-5-face ((,class (:foreground ,homebrew-green))))
-   `(rainbow-delimiters-depth-6-face ((,class (:foreground ,homebrew-blue-3))))
+   `(rainbow-delimiters-depth-6-face ((,class (:foreground ,homebrew-light-blue))))
    `(rainbow-delimiters-depth-7-face ((,class (:foreground ,homebrew-orange))))
    `(rainbow-delimiters-depth-8-face ((,class (:foreground ,homebrew-blue-2))))
    `(rainbow-delimiters-depth-9-face ((,class (:foreground ,homebrew-gray))))
@@ -771,7 +775,7 @@
    `(term-color-yellow ((,class (:foreground ,homebrew-orange
                                              :background ,homebrew-yellow))))
    `(term-color-blue ((,class (:foreground ,homebrew-blue-1
-                                           :background ,homebrew-blue-4))))
+                                           :background ,homebrew-light-blue-2))))
    `(term-color-magenta ((,class (:foreground ,homebrew-magenta
                                               :background ,homebrew-red))))
    `(term-color-cyan ((,class (:foreground ,homebrew-cyan

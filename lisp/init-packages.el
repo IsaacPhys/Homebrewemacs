@@ -14,22 +14,31 @@
 		      company
 		      company-auctex
 		      ;; --- Better Editor ---
-		      hungry-delete
 		      swiper
 		      counsel
+		      counsel-gtags
 		      smartparens
+		      highlight-parentheses
 		      ;; --- Major Mode ---
 		      js2-mode
 		      ;; --- Minor Mode ---
 		      nodejs-repl
 		      exec-path-from-shell
 		      ;; --- Themes ---
+                      color-theme
 		      monokai-theme
-		      ;; solarized-theme
+		      cyberpunk-theme
 		      ;; --- Auctex ---
 		      auctex
 		      ;; --- Neotree ---
 		      neotree
+		      ;; --- Popwin ---
+		      popwin
+		      ;; --- Yasnippet ---
+		      yasnippet
+		      yasnippet-snippets
+		      ;; --- Window Number ---
+		      window-number
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -120,6 +129,20 @@
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))  
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
 
+
+ ;;---------------------------------------------------------------------------------
+ ;; Yasnippet Mode
+ ;;---------------------------------------------------------------------------------
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
+ ;;---------------------------------------------------------------------------------
+ ;; Window Number
+ ;;---------------------------------------------------------------------------------
+(require 'window-number)
+(window-number-mode 1)
+(window-number-meta-mode 1)
 
 
 
