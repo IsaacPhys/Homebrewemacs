@@ -40,6 +40,8 @@
 		      yasnippet-snippets
 		      ;; --- Window Number ---
 		      window-number
+		      ;; --- MacOS Finder ---
+		      reveal-in-osx-finder
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)

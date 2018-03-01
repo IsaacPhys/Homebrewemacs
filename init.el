@@ -10,7 +10,7 @@
 (require 'init-org)
 (require 'init-better-defaults)
 (require 'init-keybindings)
-
+(require 'dired)
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (load-file custom-file)
