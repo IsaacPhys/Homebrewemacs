@@ -650,7 +650,7 @@
    `(org-tag ((,class (:bold t :weight bold))))
    `(org-column ((,class (:background ,homebrew-yellow-3 :foreground ,homebrew-black))))
    `(org-column-title ((,class (:background ,homebrew-bg-1 :underline t :weight bold))))
-   `(org-block ((,class (:foreground ,homebrew-fg :background ,homebrew-bg-05))))
+   ;`(org-block ((,class (:foreground ,homebrew-fg :background ,homebrew-bg-05))))
    `(org-block-begin-line 
      ((,class (:foreground ,homebrew-blue
                                         ;:background ,homebrew-bg-1
