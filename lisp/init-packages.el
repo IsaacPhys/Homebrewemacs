@@ -28,6 +28,7 @@
                       color-theme
 		      monokai-theme
 		      cyberpunk-theme
+		      cherry-blossom-theme
 		      ;; --- Auctex ---
 		      auctex
 		      ;; --- Neotree ---
@@ -140,9 +141,9 @@
  ;;---------------------------------------------------------------------------------
  ;; Window Number
  ;;---------------------------------------------------------------------------------
-(require 'window-number)
-(window-number-mode 1)
-(window-number-meta-mode 1)
+;(require 'window-number)
+;(window-number-mode 1)
+;(window-number-meta-mode 1)
 
 
 

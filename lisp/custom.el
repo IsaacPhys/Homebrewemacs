@@ -7,8 +7,7 @@
  '(company-minimum-prefix-length 2)
  '(custom-safe-themes
    (quote
-    ("d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" default)))
-)
+    ("cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" default))))
 
 
 

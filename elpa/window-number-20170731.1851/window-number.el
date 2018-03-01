@@ -200,6 +200,7 @@ Prompt user input window number if have more windows."
   (set-face-background 'window-number-face window-number-inactive-background)
   (force-mode-line-update))
 
+
 (defun window-number-set-active-color ()
   (set-face-foreground 'window-number-face window-number-active-foreground)
   (set-face-background 'window-number-face window-number-active-background)
