@@ -26,4 +26,5 @@
 (setq dired-dwim-target t)
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
+(global-set-key (kbd "<f2>") 'open-init-file)
 (provide 'init-keybindings)
