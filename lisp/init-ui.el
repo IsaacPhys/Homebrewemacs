@@ -15,12 +15,13 @@
 (setq Man-notify-method 'pushy)
 ;(global-hl-line-mode t)
 
-(set-default-font "Courier New-14") 
+(set-frame-font "Courier New-15") 
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 (if (display-graphic-p)
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "STKaiti" :size 14)))
+                    charset (font-spec :family "STKaiti" :size 15)))
 ) 
 
 ;(setq initial-frame-alist (quote ((fullscreen . maximized))))

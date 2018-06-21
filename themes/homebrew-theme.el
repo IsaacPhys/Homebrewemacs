@@ -1,40 +1,23 @@
 ;;; homebrew-theme.el --- Homebrew Color Theme
 
-;; Copyright 2012-2016, Nicholas M. Van Horn
 
-;; Author: Isaac Ruoquan Wang <hepisaacf@gmail.com>
-;; Keywords: color theme cyberpunk
-;; Package-Version: 20170724.924
-;; Version: 1.19
+;; Author: Ruoquan Isaac Wang <hepisaacf@gmail.com>
+;; Keywords: color theme homebrew
 
-;; This file is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 2, or (at your option)
-;; any later version.
+;; This theme is based on cyberpunk theme. Some adjustment
+;; has been made to get another color style. The framework
+;; of cyberpunk theme was kept, cause this is the main reason
+;; to choose cyberpunk theme as an origin. Thanks a lot to
+;; the author of cyberpunk theme.
 
-;; This file is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
+;; Due to the author's poor ability, this theme is still
+;; under construction. Changes will be made once some
+;; ugly colors appear during working. Consistency of color
+;; is the aim of this theme, but not garanteed. If you
+;; found inconsistency of color in any environment, do not
+;; hesitate to contact with the author.
 
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to
-;; the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-;; Boston, MA 02111-1307, USA.
-;;
 
-;; "and he'd still see the matrix in his sleep, bright lattices of logic
-;; unfolding across that colorless void..."
-;; William Gibson, Neuromancer.
-
-;;; Commentary:
-
-;; This theme is a port of the overtone/emacs-live theme of the same name
-;; (https://github.com/overtone/emacs-live). The original theme was
-;; designed for use with the color-theme package. This theme adopts the
-;; new built-in theme support deftheme. Additionally, this
-;; theme strives to offer as many mode-specific customizations as
-;; possible, with further tweaks that suit my fancy.
 
 (deftheme homebrew "The Homebrew color theme")
 
@@ -74,7 +57,7 @@
       (homebrew-green-1 "#2e8b57")
       (homebrew-green-4 "#008b00")
       (homebrew-green-3 "#00cd00")
-      (homebrew-green "#00f900")
+      (homebrew-green "#31ef5b")
       (homebrew-green+1 "#61CE3C")
       (homebrew-green+2 "#9fc59f")
       (homebrew-green+3 "#afd8af")
@@ -134,7 +117,8 @@
    `(buffers-tab ((,class (:background ,homebrew-black-2 :foreground ,homebrew-white-2))))
 
    ;;; basic coloring
-   `(default ((,class (:foreground ,homebrew-dark-green :background ,homebrew-bg))))
+   
+   `(default ((,class (:foreground ,homebrew-green-3 :background ,homebrew-bg))))
    `(cursor ((,class (:background ,homebrew-fg))))
    `(escape-glyph-face ((,class (:foreground ,homebrew-red))))
    ;; `(fringe ((,class (:foreground ,homebrew-fg :background ,homebrew-bg+1))))
@@ -185,7 +169,7 @@
    `(toolbar ((,class (nil))))
    `(text-cursor ((,class (:background ,homebrew-yellow :foreground ,homebrew-black))))
 
-   `(menu ((,class (:foreground ,homebrew-fg :background ,homebrew-bg))))
+   ;`(menu ((,class (:foreground ,homebrew-fg :background ,homebrew-bg))))
    `(minibuffer-prompt ((,class (:foreground ,homebrew-dark-green :background ,homebrew-black))))
    `(mode-line
      ((,class (:foreground ,homebrew-gray-9
@@ -209,11 +193,11 @@
    `(font-lock-constant-face ((,class (:foreground ,homebrew-purple-4))))
    ;; `(font-lock-doc-face ((,class (:foreground ,homebrew-green+1))))
    `(font-lock-doc-face ((,class (:foreground ,homebrew-forest-green))))
-   `(font-lock-function-name-face ((,class (:foreground ,homebrew-dodger-blue))))
+   `(font-lock-function-name-face ((,class (:foreground ,homebrew-blue))))
    `(font-lock-keyword-face ((,class (:foreground ,homebrew-medium-blue))))
    ;; `(font-lock-negation-char-face ((,class (:foreground ,homebrew-fg))))
    `(font-lock-preprocessor-face ((,class (:foreground ,homebrew-gray-3))))
-   `(font-lock-string-face ((,class (:foreground ,homebrew-pale-green))))
+   `(font-lock-string-face ((,class (:foreground ,homebrew-dark-green))))
    `(font-lock-type-face ((,class (:foreground ,homebrew-medium-blue))))
    `(font-lock-variable-name-face ((,class (:foreground ,homebrew-green-1))))
    `(font-lock-warning-face ((,class (:foreground ,homebrew-dark-red))))

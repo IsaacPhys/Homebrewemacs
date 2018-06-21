@@ -1,4 +1,4 @@
-(package-initialize)
+(unless package--initialized (package-initialize t))
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 (defun open-my-init-file()
