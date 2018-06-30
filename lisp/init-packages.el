@@ -50,15 +50,16 @@
 		      helm-rtags
 		      ;; --- Themes ---
                       color-theme
-		      ;cyberpunk-theme
-		      ;danneskjold-theme
-		      ;exotica-theme
-		      ;kaolin-themes
-		      ;bubbleberry-theme
-		      ;seti-theme
-		      ;sublime-themes
-		      ;material-theme
-		      ;atom-dark-theme
+		      cyberpunk-theme
+		      danneskjold-theme
+		      exotica-theme
+		      kaolin-themes
+		      bubbleberry-theme
+		      seti-theme
+		      sublime-themes
+		      material-theme
+		      atom-dark-theme
+		      spacemacs-theme
 		      ;; --- Window Number ---
 		      window-number
 		      ;; --- Wolfram ---
@@ -256,7 +257,7 @@
 	     "~/.emacs.d/themes/")
 					;(color-theme-granger)
 (if (display-graphic-p)
-    (load-theme 'homebrew t)
+    (load-theme 'spacemacs-dark t)
   (load-theme 'homebrew t))
 
  ;;---------------------------
