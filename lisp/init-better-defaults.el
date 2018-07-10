@@ -22,6 +22,8 @@
   (interactive)
   (indent-region (point-min)(point-max)))
 
+
+
 (defun indent-region-or-buffer ()
   "Indent a region if selected, otherwise the whole buffer."
   (interactive)

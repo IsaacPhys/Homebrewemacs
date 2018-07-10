@@ -31,6 +31,8 @@
 		      flycheck
 		      flycheck-irony
 		      flycheck-rtags
+		      ;; --- Icons ---
+		      all-the-icons
 		      ;; --- Irony Mode ---
 		      irony
 		      ;; --- MacOS Finder ---
@@ -49,17 +51,7 @@
 		      company-rtags
 		      helm-rtags
 		      ;; --- Themes ---
-                      color-theme
-		      cyberpunk-theme
-		      danneskjold-theme
-		      exotica-theme
-		      kaolin-themes
-		      bubbleberry-theme
-		      seti-theme
-		      sublime-themes
-		      material-theme
-		      atom-dark-theme
-		      spacemacs-theme
+                      doom-themes
 		      ;; --- Window Number ---
 		      window-number
 		      ;; --- Wolfram ---
@@ -248,17 +240,7 @@
 (setq enable-recursive-minibuffers t)
 
 
- ;;------------------------------------------------
- ;; Themes
- ;;------------------------------------------------
-(require 'color-theme)
-(color-theme-initialize)
-(add-to-list 'custom-theme-load-path
-	     "~/.emacs.d/themes/")
-					;(color-theme-granger)
-(if (display-graphic-p)
-    (load-theme 'spacemacs-dark t)
-  (load-theme 'homebrew t))
+
 
  ;;---------------------------
  ;; Wolfram Mode
