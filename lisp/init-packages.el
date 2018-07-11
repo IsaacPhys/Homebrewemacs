@@ -27,6 +27,8 @@
 		      ;cpputils-cmake
 		      cmake-mode
 		      cmake-ide
+		      ;; --- Eldoc-Eval ---
+		      eldoc-eval
 		      ;; --- Flycheck ---
 		      flycheck
 		      flycheck-irony
@@ -42,18 +44,24 @@
 		      ;; --- Minor Mode ---
 		      nodejs-repl
 		      exec-path-from-shell
+		      ;; --- Modeline ---
+		      doom-modeline
 		      ;; --- Neotree ---
-		      ;neotree
+		      neotree
 		      ;; --- Popwin ---
 		      popwin
+		      ;; --- Projectile ---
+		      projectile
 		      ;; --- RTags ---
 		      rtags
 		      company-rtags
 		      helm-rtags
 		      ;; --- Themes ---
                       doom-themes
+		      ;; --- Use-Package ---
+		      use-package
 		      ;; --- Window Number ---
-		      window-number
+		      window-numbering
 		      ;; --- Wolfram ---
 		      wolfram
 		      wolfram-mode
@@ -141,6 +149,13 @@
 ;;(setq cppcm-extra-preprocss-flags-from-user '("-I/usr/src/linux/include" "-DNDEBUG"))
 
  ;;------------------------------------------------
+ ;; Eldoc-Eval
+ ;;------------------------------------------------
+(eldoc-in-minibuffer-mode 1)
+
+
+
+ ;;------------------------------------------------
  ;; Flycheck
  ;;------------------------------------------------
 (add-hook 'c++-mode-hook 'flycheck-mode)
@@ -190,8 +205,27 @@
        auto-mode-alist))
 (require 'nodejs-repl)
 
+ ;;-----------------------------------------------
+ ;; Modeline
+ ;;-----------------------------------------------
+(require 'doom-modeline)
+(doom-modeline-init)
+(use-package doom-modeline
+      :ensure t
+      :defer t
+      :hook (after-init . doom-modeline-init))
 
 
+
+
+ ;;-----------------------------------------------
+ ;; Neotree
+ ;;-----------------------------------------------
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(doom-themes-neotree-config)
+(setq doom-neotree-file-icons t)
  ;;-----------------------------------------------
  ;; Parantheses 
  ;;-----------------------------------------------
@@ -211,6 +245,12 @@
  ;;------------------------------------------------
 (require 'popwin)  
 (popwin-mode t)
+
+
+ ;;------------------------------------------------
+ ;; Projectile
+ ;;------------------------------------------------
+(projectile-mode 1)
 
 
  ;;------------------------------------------------
@@ -239,7 +279,10 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 
-
+ ;;------------------------------------------------
+ ;; Use-Package
+ ;;------------------------------------------------
+(require 'use-package)
 
 
  ;;---------------------------
@@ -261,10 +304,11 @@
  ;;------------------------------------------------
  ;; Window Number
  ;;------------------------------------------------
-;(require 'window-number)
+(require 'window-numbering)
 ;(window-number-mode 1)
 ;(window-number-meta-mode 1)
-
+(when (display-graphic-p)
+  (window-numbering-mode +1))
 
 
 (provide 'init-packages)

@@ -6,7 +6,9 @@
 
 (setq inhibit-splash-screen t)
 
-(setq-default cursor-type 'bar)
+(setq-default
+ cursor-type 'bar
+ )
 
 (setq sp-highlight-pair-overlay nil)
 
@@ -20,7 +22,11 @@
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset (font-spec :family "STKaiti" :size 15)))
-) 
+)
+
+
+
+ 
 
  ;;------------------------------------------------
  ;; Themes
