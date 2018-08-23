@@ -33,10 +33,15 @@
 		      flycheck
 		      flycheck-irony
 		      flycheck-rtags
+		      ;; --- Flyspell ---
+		      flyspell-correct
+		      flyspell-correct-popup
 		      ;; --- Icons ---
 		      all-the-icons
 		      ;; --- Irony Mode ---
 		      irony
+		      ;; --- Ispell ---
+		      ispell
 		      ;; --- MacOS Finder ---
 		      reveal-in-osx-finder
 		      ;; --- Major Mode ---
@@ -171,6 +176,16 @@
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
+
+ ;;------------------------------------------------
+ ;; Flyspell
+ ;;------------------------------------------------
+
+(require 'flyspell-correct)
+(require 'flyspell-correct-popup)
+(define-key flyspell-mode-map (kbd "C-;")
+  'flyspell-correct-previous-word-generic)
+(add-hook 'flyspell-mode-hook #'flyspell-correct-auto-mode)
 
  ;;-----------------------------------------------
  ;; Hungry Delete

@@ -1,6 +1,10 @@
 (unless package--initialized (package-initialize t))
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;Increase the garbage collection threshold to 128 MB to ease startup
+(setq gc-cons-threshold (* 402653184 1024 1024 ))
+(let ((file-name-handler-alist nil))
+
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
@@ -12,6 +16,10 @@
 (require 'init-keybindings)
 (require 'dired)
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+)
+;Garbage collector-decrease threshold to 5 MB
+(add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (* 16777216 1024 1024))))
 
 
 
+    
