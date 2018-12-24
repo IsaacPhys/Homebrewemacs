@@ -1,38 +1,37 @@
+;; Turn off tool-bar
 (tool-bar-mode -1)
 
+;; Turn off scroll-bar
 (scroll-bar-mode -1)
 
+;; Show linum-mode
+(global-linum-mode t)
+
+;; Change cursor type 
+(setq-default cursor-type 'bar)
+
+;; Full Screen
 (toggle-frame-fullscreen)
 
-(setq inhibit-splash-screen t)
-
-(setq-default
- cursor-type 'bar
- )
-
-(setq sp-highlight-pair-overlay nil)
-
-(setq require-final-newline t)
-
-(setq Man-notify-method 'pushy)
-					;(global-hl-line-mode t)
-
+;; -----------------------------------------------
+;; Font Set
+;; -----------------------------------------------
 (set-frame-font "Courier New-15")
-(if (display-graphic-p)
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "STKaiti" :size 15)))
-)
+
+;;-----------------------------------------------
+;; Modeline
+;;-----------------------------------------------
+(require 'doom-modeline)
+(doom-modeline-init)
+(use-package doom-modeline
+      :ensure t
+      :defer t
+      :hook (after-init . doom-modeline-init))
 
 
-
- 
-
- ;;------------------------------------------------
- ;; Themes
- ;;------------------------------------------------
-(require 'color-theme)
-(color-theme-initialize)
+;;------------------------------------------------
+;; Themes
+;;------------------------------------------------
 (add-to-list 'custom-theme-load-path
 	     "~/.emacs.d/themes/") 
 (if (display-graphic-p)
@@ -42,11 +41,10 @@
   (load-theme 'homebrew t))
 
 
-
+; Get dark app bar on MacOS
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 
-;(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
 
 (provide 'init-ui)
-
