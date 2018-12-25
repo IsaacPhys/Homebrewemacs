@@ -37,7 +37,7 @@
 (if (display-graphic-p)
    ; (progn
     ;  (require 'doom-themes)
-      (load-theme 'doom-one t)
+    (load-theme 'doom-one t)
   (load-theme 'homebrew t))
 
 

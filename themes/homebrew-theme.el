@@ -252,12 +252,14 @@
 
    ;; auto-complete
    `(ac-completion-face ((,class (:background ,homebrew-gray-2 :underline t))))
-   `(ac-candidate-face ((,class (:background ,homebrew-gray-4 :foreground ,homebrew-black))))
-   `(ac-selection-face ((,class (:background ,homebrew-pink-1 :foreground ,homebrew-black))))
+   `(ac-candidate-face ((,class (:background ,homebrew-gray-2 :foreground ,homebrew-dark-green))))
+   `(ac-selection-face ((,class (:background ,homebrew-dark-blue :foreground ,homebrew-green-3))))
    `(popup-tip-face ((,class (:background ,homebrew-gray-5 :foreground ,homebrew-white))))
    `(popup-scroll-bar-foreground-face ((,class (:background ,homebrew-black-3))))
    `(popup-scroll-bar-background-face ((,class (:background ,homebrew-gray-5))))
    `(popup-isearch-match ((,class (:background ,homebrew-black :foreground ,homebrew-pink-1))))
+   `(popup-menu-selection-face ((,class (:background ,homebrew-dark-blue :foreground ,homebrew-green-3))))
+   `(popup-menu-face ((,class (:background ,homebrew-gray-2 :foreground ,homebrew-dark-green))))
 
    `(window-number-face ((,class (:background ,homebrew-gray-6 :foreground ,homebrew-blue-5))))
 
@@ -317,10 +319,11 @@
    ;; flymake
    `(flymake-errline ((,class (:foreground ,homebrew-red-1 :weight bold :underline t))))
    `(flymake-warnline ((,class (:foreground ,homebrew-yellow-1 :weight bold :underline t))))
-
+   ;; flycheck
+   `(flycheck-warning ((,class (:underline t))))
    ;; flyspell
    `(flyspell-duplicate ((,class (:foreground ,homebrew-yellow-1 :weight bold :underline t))))
-   `(flyspell-incorrect ((,class (:foreground ,homebrew-orange-2 :weight bold :underline t))))
+   `(flyspell-incorrect ((,class (:foreground ,homebrew-dark-red :weight bold :underline t))))
 
    ;; erc
    `(erc-action-face ((,class (:inherit erc-default-face))))

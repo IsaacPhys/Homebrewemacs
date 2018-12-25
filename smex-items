@@ -1,0 +1,24 @@
+
+;; ----- smex-history -----
+(
+ package-autoremove
+ elpy-mode
+ load-theme
+ customize-group
+ flyspell-correct-at-point
+ flyspell-prog-mode
+ flyspell-mode
+)
+
+;; ----- smex-data -----
+(
+ (eval-buffer . 1)
+ (flyspell-mode . 14)
+ (flyspell-correct-wrapper . 2)
+ (flyspell-prog-mode . 2)
+ (flyspell-correct-at-point . 1)
+ (customize-group . 3)
+ (load-theme . 1)
+ (elpy-mode . 1)
+ (package-autoremove . 1)
+)

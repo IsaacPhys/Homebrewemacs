@@ -16,6 +16,8 @@
   (require 'init-auctex)
   (require 'init-company-mode)
   (require 'init-minibuffer)
+  (require 'init-spellcheck)
+  (require 'init-python)
   (require 'custom)
   (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
   )

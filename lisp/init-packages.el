@@ -12,15 +12,29 @@
 		      exec-path-from-shell
 		      ;; --- Auctex ---
 		      auctex
-		       ;; --- Better Minibuffer Command and Search ---
+		      ;; --- Auto-Complete ---
+		      auto-complete
+		      ;; --- Better Minibuffer Command and Search ---
 		      counsel
 		      swiper
                       ;; --- Company Mode ---
                       company
+		      ;; --- Grammar Check ---
+		      flycheck
 		      ;; --- Mode Line ---
 		      doom-modeline
 		      ;; --- Parentheses ---
 		      smartparens
+		      ;; --- Projectile ---
+		      projectile
+		      ;; --- Python ---
+		      lsp-mode
+		      lsp-python
+		      jedi
+		      company-jedi
+		      py-autopep8
+		      ;; --- Spell Check ---
+		      flyspell-correct-popup
 		      ;; --- Themes ---
 		      doom-themes
 		      ;; --- Use Package ---

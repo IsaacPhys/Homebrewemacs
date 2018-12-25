@@ -8,11 +8,26 @@
 ;; ------------------------
 (electric-indent-mode t)
 
+;; ------------------------
+;; Auto Revert when revert the git
+;; ------------------------
+(global-auto-revert-mode t)
+
+;; ------------------------
+;; Turn off autosave
+;; ------------------------
+(setq auto-save-default nil)
+
+;; ------------------------
+;; Use y and n for yes and no
+;; ------------------------
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; ------------------------
 ;; Smart Parens
 ;; ------------------------
-;; Use smartparens to autopair the right parentheses, use highlight-parentheses to show the pair of parentheses
+;; Use smartparens to autopair the right parentheses,
+;; use highlight-parentheses to show the pair of parentheses
 (require 'smartparens-config)
 (smartparens-global-mode t)
 
@@ -43,4 +58,15 @@
 ;; ------------------------
 (delete-selection-mode t)
 
+(defun er-switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(global-set-key (kbd "C-c b") #'er-switch-to-previous-buffer)
+
+
 (provide 'init-better-defaults)
+
+
