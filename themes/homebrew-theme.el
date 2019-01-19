@@ -175,7 +175,8 @@
      ((,class (:foreground ,homebrew-gray-9
                            :background ,homebrew-dark-red
                            :box (:line-width 1 :color ,homebrew-dark-red)))))
-  ;; `(mode-line-buffer-id ((,class (:foreground ,homebrew-gray-9 :weight bold))))
+   ;; `(mode-line-buffer-id ((,class (:foreground ,homebrew-gray-9 :weight bold))))
+   `(doom-modeline-buffer-modified ((,class (:foreground ,homebrew-dark-green, :bold t))))
    `(mode-line-inactive
      ((,class (:foreground ,homebrew-dark-green
                            :background ,homebrew-bg
@@ -321,8 +322,9 @@
    `(flymake-warnline ((,class (:foreground ,homebrew-yellow-1 :weight bold :underline t))))
    ;; flycheck
    `(flycheck-warning ((,class (:underline t))))
+   `(flycheck-error ((,class (:foreground ,homebrew-dark-red :weight bold :underline t))))
    ;; flyspell
-   `(flyspell-duplicate ((,class (:foreground ,homebrew-yellow-1 :weight bold :underline t))))
+   `(flyspell-duplicate ((,class (:foreground ,homebrew-dark-red :weight bold :underline t))))
    `(flyspell-incorrect ((,class (:foreground ,homebrew-dark-red :weight bold :underline t))))
 
    ;; erc

@@ -30,6 +30,12 @@
 ;; use highlight-parentheses to show the pair of parentheses
 (require 'smartparens-config)
 (smartparens-global-mode t)
+(require 'highlight-parentheses) 
+(define-globalized-minor-mode global-highlight-parentheses-mode  
+  highlight-parentheses-mode  
+  (lambda ()  
+    (highlight-parentheses-mode t)))  
+(global-highlight-parentheses-mode t)
 
 
 ;; ------------------------
@@ -58,6 +64,10 @@
 ;; ------------------------
 (delete-selection-mode t)
 
+
+;; -----------------------
+;; Switch to Previous buffer
+;; -----------------------
 (defun er-switch-to-previous-buffer ()
   "Switch to previously open buffer.
 Repeated invocations toggle between the two most recently open buffers."
@@ -65,6 +75,21 @@ Repeated invocations toggle between the two most recently open buffers."
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 
 (global-set-key (kbd "C-c b") #'er-switch-to-previous-buffer)
+
+;; -----------------------
+;; Abbrev Definition
+;; -----------------------
+(setq-default abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ;; Return
+					    ("ret" "return")
+					    ))
+
+;; ----------------------
+;; Hungry Delete
+;; ----------------------
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 
 
 (provide 'init-better-defaults)

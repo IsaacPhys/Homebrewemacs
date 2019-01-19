@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/Work/DeepLearning/")
+("~/.emacs.d/" "~/Dropbox/Analysis/cpp/" "~/Dropbox/Analysis/changeroot/" "~/Work/DeepLearning/")

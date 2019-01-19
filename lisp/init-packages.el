@@ -21,10 +21,13 @@
                       company
 		      ;; --- Grammar Check ---
 		      flycheck
+		      ;; --- Hungry Delete ---
+		      hungry-delete
 		      ;; --- Mode Line ---
 		      doom-modeline
 		      ;; --- Parentheses ---
 		      smartparens
+		      highlight-parentheses
 		      ;; --- Projectile ---
 		      projectile
 		      ;; --- Python ---

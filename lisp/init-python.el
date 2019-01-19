@@ -51,6 +51,7 @@
 (setq jedi:setup-keys t)
 (setq jedi:complete-on-dot t)
 (add-hook 'python-mode-hook 'jedi:setup)
+
 ;(add-hook 'python-mode-hook 'jedi:ac-setup)
 ;; -------------------------------------------
 
@@ -62,9 +63,18 @@
  python-shell-interpreter "ipython"
  python-shell-interpreter-args "-i")
 
-
+;; Python flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 
+;; Autopep, automatically formatting
+(require 'py-autopep8)
+(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+
+(setq python-indent-offset 4)
+
+(setq tab-width 4)
+(set-variable 'python-indent-offset 4)
+(set-variable 'python-indent-guess-indent-offset nil)
 
 (provide 'init-python)
