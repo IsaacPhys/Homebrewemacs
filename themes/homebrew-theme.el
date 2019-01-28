@@ -186,6 +186,7 @@
    `(secondary-selection ((,class (:background ,homebrew-bg+2))))
    `(trailing-whitespace ((,class (:background ,homebrew-red))))
    `(vertical-border ((,class (:foreground ,homebrew-dark-green :background ,homebrew-bg))))
+   
 
    ;;; font lock
    `(font-lock-builtin-face ((,class (:foreground ,homebrew-blue))))

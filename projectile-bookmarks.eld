@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/Dropbox/Analysis/cpp/" "~/Dropbox/Analysis/changeroot/" "~/Work/DeepLearning/")
+("~/.emacs.d/" "~/Work/DeepLearning/" "~/Dropbox/Analysis/cpp/" "~/Dropbox/Analysis/changeroot/" "~/Work/Delphes-3.4.1/" "/usr/local/Cellar/pythia/8.230/share/Pythia8/examples/")
