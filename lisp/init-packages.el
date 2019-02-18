@@ -40,6 +40,7 @@
 		      flyspell-correct-popup
 		      ;; --- Themes ---
 		      doom-themes
+		      dracula-theme
 		      spacemacs-theme
 		      ;; --- Use Package ---
 		      use-package
