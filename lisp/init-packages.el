@@ -31,10 +31,10 @@
 		      ;; --- Projectile ---
 		      projectile
 		      ;; --- Python ---
-		      lsp-mode
-		      lsp-python
 		      jedi
 		      company-jedi
+		      ein
+		      pynt
 		      py-autopep8
 		      ;; --- Spell Check ---
 		      flyspell-correct-popup
@@ -44,6 +44,11 @@
 		      spacemacs-theme
 		      ;; --- Use Package ---
 		      use-package
+		      ;; -- WebURL ---
+		      request
+		      request-deferred
+		      skewer-mode
+		      websocket
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)

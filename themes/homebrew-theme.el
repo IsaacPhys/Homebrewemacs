@@ -118,7 +118,9 @@
 
    ;;; basic coloring
    
-   `(default ((,class (:foreground ,homebrew-green-3 :background ,homebrew-bg))))
+   `(default ((,class (:foreground ,homebrew-green-3
+                                   ;:background ,homebrew-bg
+                                   ))))
    `(cursor ((,class (:background ,homebrew-fg))))
    `(escape-glyph-face ((,class (:foreground ,homebrew-red))))
    ;; `(fringe ((,class (:foreground ,homebrew-fg :background ,homebrew-bg+1))))

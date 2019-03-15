@@ -11,7 +11,7 @@
   (require 'init-ui)
   (require 'init-org)
   (require 'init-better-defaults)
-  ;(require 'init-keybindings)
+					;(require 'init-keybindings)
 					;(require 'dired)
   (require 'init-auctex)
   (require 'init-company-mode)
