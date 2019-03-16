@@ -1,2 +1,2 @@
-;;; -*- no-byte-compile: t -*-
+;;; Generated package description from /Users/isaac/.emacs.d/elpa/pynt-20180710.726/pynt.el  -*- no-byte-compile: t -*-
 (define-package "pynt" "20180710.726" "Generate and scroll EIN buffers from python code" '((emacs "24.4") (ein "0.13.1") (epc "0.1.1") (deferred "0.5.1")) :commit "86cf9ce78d34f92bfd0764c9cbb75427ebd429e6" :keywords '("convenience") :authors '(("Edward Banner" . "edward.banner@gmail.com")) :maintainer '("Edward Banner" . "edward.banner@gmail.com") :url "https://github.com/ebanner/pynt")

@@ -12,9 +12,7 @@
 
 (autoload 'flyspell-correct-at-point "flyspell-correct" "\
 Correct word before point using `flyspell-correct-interface'.
-Adapted from `flyspell-correct-word-before-point'.
-
-\(fn)" t nil)
+Adapted from `flyspell-correct-word-before-point'." t nil)
 
 (autoload 'flyspell-correct-previous "flyspell-correct" "\
 Correct the first misspelled word that occurs before POSITION.

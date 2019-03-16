@@ -10,10 +10,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from js2-imenu-extras.el
 
-(autoload 'js2-imenu-extras-setup "js2-imenu-extras" "\
-
-
-\(fn)" nil nil)
+(autoload 'js2-imenu-extras-setup "js2-imenu-extras" nil nil nil)
 
 (autoload 'js2-imenu-extras-mode "js2-imenu-extras" "\
 Toggle Imenu support for frameworks and structural patterns.

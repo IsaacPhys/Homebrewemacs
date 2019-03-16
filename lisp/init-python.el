@@ -4,14 +4,26 @@
 ;;; This is still being worked
 ;;; Code:
 ;; ----- Projectile ----------
-(require 'projectile)
-(projectile-global-mode)
+;(require 'projectile)
+;(projectile-global-mode)
 
 ;; ----- Switch Python Version -----
 (setq python-shell-interpreter "python3")
 
 ;; ----- Set PYTHONPATH ---------
 (setenv"PYTHONPATH""/Users/isaac/Work/root/6.16.00/lib/root")
+
+
+;; --------------------------------
+;; Indent-Tools
+;; --------------------------------
+(require 'indent-tools)
+(global-set-key (kbd "C-c C-l") 'indent-tools-hydra/body)
+(add-hook 'python-mode-hook
+ (lambda () (define-key python-mode-map (kbd "C-c C-l") 'indent-tools-hydra/body))
+)
+
+
 
 ;; -----Use Jedi for completion -----
 (defun company-jedi-setup ()
@@ -22,26 +34,39 @@
 (setq jedi:complete-on-dot t)
 (add-hook 'python-mode-hook 'jedi:setup)
 
-;; Interactive Programming with IPython
 
-;(require 'ein)
-;(require 'ein-notebook)
-;(require 'ein-subpackages)
+;; ----- YAPF ------
+ (use-package yapfify
+    :diminish yapf-mode
+    :hook (python-mode . yapf-mode))
 
-;; ------- Python flycheck -------------------
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
-
-;; Autopep, automatically formatting
-(require 'py-autopep8)
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
-
-(setq python-indent-offset 4)
-
+;; ---- Pytest ------
+(require 'pytest)
+;
+;;; Interactive Programming with IPython
+;
+;;(require 'ein)
+;;(require 'ein-notebook)
+;;(require 'ein-subpackages)
+;
+;;; ------- Python flycheck -------------------
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq flycheck-python-pylint-executable "/usr/local/bin/pylint")
+	    (setq flycheck-python-flake8-executable "/usr/local/bin/flake8")
+            (setq flycheck-pylintrc "/home/tools/.pylintrc")))
+;
+;
+;;; Autopep, automatically formatting
+;(require 'py-autopep8)
+;(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+;
+;(setq python-indent-offset 4)
+;
 (setq tab-width 4)
 (set-variable 'python-indent-offset 4)
 (set-variable 'python-indent-guess-indent-offset nil)
-
+;
 
 
 

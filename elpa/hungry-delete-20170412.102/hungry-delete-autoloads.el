@@ -58,9 +58,7 @@ if ARG is `toggle'; disable the mode otherwise.
 \(fn &optional ARG)" t nil)
 
 (autoload 'turn-on-hungry-delete-mode "hungry-delete" "\
-Turn on hungry delete mode if the buffer is appropriate.
-
-\(fn)" t nil)
+Turn on hungry delete mode if the buffer is appropriate." t nil)
 
 (defvar global-hungry-delete-mode nil "\
 Non-nil if Global Hungry-Delete mode is enabled.

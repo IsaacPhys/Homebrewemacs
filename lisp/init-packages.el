@@ -12,13 +12,13 @@
 		      exec-path-from-shell
 		      ;; --- Auctex ---
 		      auctex
-		      ;; --- Auto-Complete ---
-		      auto-complete
 		      ;; --- Better Minibuffer Command and Search ---
 		      counsel
 		      swiper
-                      ;; --- Company Mode ---
-                      company
+              ;; --- Company Mode ---
+              company
+		      ;; --- Evil-Matchit ---
+		      evil-matchit
 		      ;; --- Grammar Check ---
 		      flycheck
 		      ;; --- Hungry Delete ---
@@ -29,13 +29,15 @@
 		      smartparens
 		      highlight-parentheses
 		      ;; --- Projectile ---
-		      projectile
+		      ;projectile
 		      ;; --- Python ---
+		      indent-tools
 		      jedi
 		      company-jedi
-		      ein
+		      pytest
+		      yapfify
+		      ;ein
 		      pynt
-		      py-autopep8
 		      ;; --- Spell Check ---
 		      flyspell-correct-popup
 		      ;; --- Themes ---
@@ -45,10 +47,10 @@
 		      ;; --- Use Package ---
 		      use-package
 		      ;; -- WebURL ---
-		      request
-		      request-deferred
-		      skewer-mode
-		      websocket
+		     ; request
+		     ; request-deferred
+		     ; skewer-mode
+		     ; websocket
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)

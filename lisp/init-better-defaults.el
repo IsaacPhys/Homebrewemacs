@@ -17,11 +17,19 @@
 ;; Turn off autosave
 ;; ------------------------
 (setq auto-save-default nil)
-
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'super)
+(setq mac-pass-command-to-system nil)
 ;; ------------------------
 ;; Use y and n for yes and no
 ;; ------------------------
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; ------------------------
+;; Evil-Matchit
+;; ------------------------
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
 
 ;; ------------------------
 ;; Smart Parens

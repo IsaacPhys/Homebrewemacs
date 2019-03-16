@@ -12,19 +12,13 @@
 (autoload 'httpd-start "simple-httpd" "\
 Start the web server process. If the server is already
 running, this will restart the server. There is only one server
-instance per Emacs instance.
-
-\(fn)" t nil)
+instance per Emacs instance." t nil)
 
 (autoload 'httpd-stop "simple-httpd" "\
-Stop the web server if it is currently running, otherwise do nothing.
-
-\(fn)" t nil)
+Stop the web server if it is currently running, otherwise do nothing." t nil)
 
 (autoload 'httpd-running-p "simple-httpd" "\
-Return non-nil if the simple-httpd server is running.
-
-\(fn)" nil nil)
+Return non-nil if the simple-httpd server is running." nil nil)
 
 (autoload 'httpd-serve-directory "simple-httpd" "\
 Start the web server with given `directory' as `httpd-root'.

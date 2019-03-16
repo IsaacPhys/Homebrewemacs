@@ -17,9 +17,7 @@
 ;;; Generated autoloads from skewer-bower.el
 
 (autoload 'skewer-bower-refresh "skewer-bower" "\
-Update the package listing and packages synchronously.
-
-\(fn)" t nil)
+Update the package listing and packages synchronously." t nil)
 
 (autoload 'skewer-bower-load "skewer-bower" "\
 Dynamically load a library from bower into the current page.
@@ -68,9 +66,7 @@ if ARG is `toggle'; disable the mode otherwise.
 ;;; Generated autoloads from skewer-mode.el
 
 (autoload 'list-skewer-clients "skewer-mode" "\
-List the attached browsers in a buffer.
-
-\(fn)" t nil)
+List the attached browsers in a buffer." t nil)
 
 (autoload 'skewer-mode "skewer-mode" "\
 Minor mode for interacting with a browser.
@@ -93,9 +89,7 @@ the contents of the current buffer as the root document.
 \(fn &optional ARG)" t nil)
 
 (autoload 'skewer-run-phantomjs "skewer-mode" "\
-Connect an inferior PhantomJS process to Skewer, returning the process.
-
-\(fn)" t nil)
+Connect an inferior PhantomJS process to Skewer, returning the process." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "skewer-mode" '("httpd/skewer/" "phantomjs-program-name" "skewer")))
 
@@ -110,9 +104,7 @@ Catches all browser messages logging some to the REPL.
 \(fn RESPONSE)" nil nil)
 
 (autoload 'skewer-repl "skewer-repl" "\
-Start a JavaScript REPL to be evaluated in the visiting browser.
-
-\(fn)" t nil)
+Start a JavaScript REPL to be evaluated in the visiting browser." t nil)
 
 (eval-after-load 'skewer-mode '(progn (add-hook 'skewer-response-hook #'skewer-repl--response-hook) (add-hook 'skewer-repl-mode-hook #'skewer-repl-mode-compilation-shell-hook) (define-key skewer-mode-map (kbd "C-c C-z") #'skewer-repl)))
 
@@ -124,9 +116,7 @@ Start a JavaScript REPL to be evaluated in the visiting browser.
 ;;; Generated autoloads from skewer-setup.el
 
 (autoload 'skewer-setup "skewer-setup" "\
-Fully integrate Skewer into js2-mode, css-mode, and html-mode buffers.
-
-\(fn)" nil nil)
+Fully integrate Skewer into js2-mode, css-mode, and html-mode buffers." nil nil)
 
 ;;;***
 
