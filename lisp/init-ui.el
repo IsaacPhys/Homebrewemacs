@@ -11,7 +11,7 @@
 (setq-default cursor-type 'bar)
 
 ;; Full Screen
-					;(toggle-frame-fullscreen)
+;(toggle-frame-fullscreen)
 
 ;(setq default-frame-alist
 ;      `((top . 0)
@@ -22,12 +22,27 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; ----------------------------------------------
+;; Set Spacemacs Logo
+;; ----------------------------------------------
+(defcustom MySpacemacs-logo (expand-file-name "spacemacs.png" user-emacs-directory)
+  "Set Centaur logo. nil means official logo."
+  :type 'string)
+(if (display-graphic-p)
+     (progn    
+    (setq dashboard-startup-banner (or MySpacemacs-logo 'official))
+    (setq fancy-splash-image MySpacemacs-logo)))
 ;; -----------------------------------------------
 ;; Font Set
 ;; -----------------------------------------------
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-14"))
 (set-frame-font "Source Code Pro-14")
+;;中文字体配置
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "STKaiti" :size 16)))
 
 ;;-----------------------------------------------
 ;; Modeline
@@ -48,7 +63,7 @@
 (if (display-graphic-p)
    ; (progn
     ;  (require 'doom-themes)
-    (load-theme 'doom-one t)
+    (load-theme 'spacemacs-dark t)
   (load-theme 'homebrew t))
 
 
