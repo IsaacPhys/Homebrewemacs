@@ -572,6 +572,7 @@ to 'auto, tags may not be properly aligned. "
 
 ;;;;; latex
      `(font-latex-bold-face ((,class (:foreground ,comp))))
+     `(font-latex-math-face ((,class (:background "#292e34" :foreground "#2aa1ae"))))
      `(font-latex-italic-face ((,class (:foreground ,keyword :italic t))))
      `(font-latex-match-reference-keywords ((,class (:foreground ,const))))
      `(font-latex-match-variable-keywords ((,class (:foreground ,var))))
@@ -662,6 +663,7 @@ to 'auto, tags may not be properly aligned. "
      `(mode-line           ((,class (:foreground ,base :background ,act1 :box (:color ,border :line-width 1)))))
      `(mode-line-buffer-id ((,class (:inherit bold :foreground ,func))))
      `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box (:color ,border :line-width 1)))))
+     `(doom-modeline-buffer-major-mode ((,class (:foreground "#51afef" :inherit bold))))
 
 ;;;;; mu4e
      `(mu4e-attach-number-face ((,class (:foreground ,var))))
