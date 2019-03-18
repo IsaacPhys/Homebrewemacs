@@ -47,13 +47,14 @@
 ;;-----------------------------------------------
 ;; Modeline
 ;;-----------------------------------------------
-(require 'doom-modeline)
-(doom-modeline-init)
-(use-package doom-modeline
-      :ensure t
-      :defer t
-      :hook (after-init . doom-modeline-init))
-
+;(require 'doom-modeline)
+;(doom-modeline-init)
+;(use-package doom-modeline
+;      :ensure t
+;      :defer t
+;      :hook (after-init . doom-modeline-init))
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
 
 ;;------------------------------------------------
 ;; Themes

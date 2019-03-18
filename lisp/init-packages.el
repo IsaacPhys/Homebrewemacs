@@ -9,35 +9,38 @@
 
 ;; Add packages
 (defvar my/packages '(
-		      exec-path-from-shell
-		      ;; --- Auctex ---
-		      auctex
 		      ;; --- Better Minibuffer Command and Search ---
 		      counsel
 		      swiper
-              ;; --- Company Mode ---
-              company
+		      ;; --- Company Mode ---
+		      company
+		      ;; --- Environment ---
+		      exec-path-from-shell
 		      ;; --- Evil-Matchit ---
 		      evil-matchit
 		      ;; --- Grammar Check ---
 		      flycheck
 		      ;; --- Hungry Delete ---
 		      hungry-delete
+		      ;; --- LaTeX ---
+		      auctex
+		      auctex-latexmk
+		      company-auctex
 		      ;; --- Mode Line ---
 		      doom-modeline
+		      spaceline
 		      ;; --- Parentheses ---
-		      smartparens
 		      highlight-parentheses
+		      smartparens
 		      ;; --- Projectile ---
 		      ;projectile
 		      ;; --- Python ---
+		      company-jedi
 		      indent-tools
 		      jedi
-		      company-jedi
+		      pynt
 		      pytest
 		      yapfify
-		      ;ein
-		      pynt
 		      ;; --- Spell Check ---
 		      flyspell-correct-popup
 		      ;; --- Themes ---
@@ -46,11 +49,6 @@
 		      spacemacs-theme
 		      ;; --- Use Package ---
 		      use-package
-		      ;; -- WebURL ---
-		     ; request
-		     ; request-deferred
-		     ; skewer-mode
-		     ; websocket
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
