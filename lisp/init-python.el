@@ -11,8 +11,15 @@
 (setq python-shell-interpreter "python3")
 
 ;; ----- Set PYTHONPATH ---------
-(setenv"PYTHONPATH""/Users/isaac/Work/root/6.16.00/lib/root")
-
+(exec-path-from-shell-copy-env "PYTHONPATH")
+;(setenv "PYTHONPATH""/Users/isaac/Work/root/6.16.00/lib/root")
+;(setenv "PYTHONPATH"
+;  (concat
+;  "/Users/isaac/Work/root/6.16.00/lib/root/" ";"
+;  "/Users/isaac/Work/Analysis/" ";"
+;   (getenv "PYTHONPATH")
+;  )
+;)
 
 ;; --------------------------------
 ;; Indent-Tools
