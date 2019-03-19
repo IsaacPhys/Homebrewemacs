@@ -44,30 +44,21 @@
 (require 'pytest)
 ;
 ;;; Interactive Programming with IPython
-;
+
 ;;(require 'ein)
 ;;(require 'ein-notebook)
 ;;(require 'ein-subpackages)
-;
+
 ;;; ------- Python flycheck -------------------
 (add-hook 'python-mode-hook
           (lambda ()
             (setq flycheck-python-pylint-executable "/usr/local/bin/pylint")
 	    (setq flycheck-python-flake8-executable "/usr/local/bin/flake8")
             (setq flycheck-pylintrc "/home/tools/.pylintrc")))
-;
-;
-;;; Autopep, automatically formatting
-;(require 'py-autopep8)
-;(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
-;
-;(setq python-indent-offset 4)
-;
+
 (setq tab-width 4)
 (set-variable 'python-indent-offset 4)
 (set-variable 'python-indent-guess-indent-offset nil)
-;
-
 
 
 (provide 'init-python)

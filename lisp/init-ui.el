@@ -39,10 +39,12 @@
              '(font . "Source Code Pro-14"))
 (set-frame-font "Source Code Pro-14")
 ;;中文字体配置
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset
-                    (font-spec :family "STKaiti" :size 16)))
+(if (display-graphic-p)
+    (progn
+      (dolist (charset '(kana han symbol cjk-misc bopomofo))
+	(set-fontset-font (frame-parameter nil 'font)
+			  charset
+			  (font-spec :family "STKaiti" :size 16)))))
 
 ;;-----------------------------------------------
 ;; Modeline
@@ -52,9 +54,17 @@
 ;(use-package doom-modeline
 ;      :ensure t
 ;      :defer t
-;      :hook (after-init . doom-modeline-init))
-(require 'spaceline-config)
-(spaceline-spacemacs-theme)
+					;      :hook (after-init . doom-modeline-init))
+(if (display-graphic-p)
+    (progn
+      (require 'spaceline-config)
+      (spaceline-spacemacs-theme))
+  (progn
+    (require 'doom-modeline)
+    (doom-modeline-init)
+    (use-package doom-modeline
+      :ensure t
+      :defer t)))
 
 ;;------------------------------------------------
 ;; Themes

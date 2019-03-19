@@ -19,4 +19,12 @@
 (require 'company-auctex)
 (company-auctex-init)
 
+;; ========================================
+;; CDLatex
+;; ========================================
+(add-to-list 'load-path "~/.emacs.d/latex")
+(require 'cdlatex)
+(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
+(add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
+
 (provide 'init-auctex)
