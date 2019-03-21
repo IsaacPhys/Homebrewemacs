@@ -6,10 +6,11 @@
    (require 'package)
    (unless package--initialized (package-initialize t))
    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
+(package-initialize)
 
 ;; Add packages
 (defvar my/packages '(
-		      ;; --- Better Minibuffer Command and Search ---
+		      ;; --- Better Minibuffer ---
 		      counsel
 		      swiper
 		      ;; --- Company Mode ---
@@ -36,6 +37,7 @@
 		      ;projectile
 		      ;; --- Python ---
 		      company-jedi
+		      ein
 		      indent-tools
 		      jedi
 		      pynt
@@ -45,7 +47,6 @@
 		      flyspell-correct-popup
 		      ;; --- Themes ---
 		      doom-themes
-		      dracula-theme
 		      spacemacs-theme
 		      ;; --- Use Package ---
 		      use-package

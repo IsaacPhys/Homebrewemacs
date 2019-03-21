@@ -20,7 +20,7 @@
 ;        (height . 50)
 ;        ))
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; ----------------------------------------------
 ;; Set Spacemacs Logo

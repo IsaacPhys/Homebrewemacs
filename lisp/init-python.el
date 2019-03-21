@@ -12,14 +12,7 @@
 
 ;; ----- Set PYTHONPATH ---------
 (exec-path-from-shell-copy-env "PYTHONPATH")
-;(setenv "PYTHONPATH""/Users/isaac/Work/root/6.16.00/lib/root")
-;(setenv "PYTHONPATH"
-;  (concat
-;  "/Users/isaac/Work/root/6.16.00/lib/root/" ";"
-;  "/Users/isaac/Work/Analysis/" ";"
-;   (getenv "PYTHONPATH")
-;  )
-;)
+
 
 ;; --------------------------------
 ;; Indent-Tools
@@ -51,10 +44,9 @@
 (require 'pytest)
 ;
 ;;; Interactive Programming with IPython
-
-;;(require 'ein)
-;;(require 'ein-notebook)
-;;(require 'ein-subpackages)
+(require 'ein)
+(require 'ein-notebook)
+(require 'ein-subpackages)
 
 ;;; ------- Python flycheck -------------------
 (add-hook 'python-mode-hook

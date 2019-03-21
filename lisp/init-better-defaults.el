@@ -18,8 +18,18 @@
 ;; ------------------------
 (setq auto-save-default nil)
 (setq mac-option-modifier 'meta)
-(setq mac-command-modifier 'super)
-(setq mac-pass-command-to-system nil)
+(setq mac-command-modifier 'hyper)
+(global-set-key [(hyper a)] 'mark-whole-buffer)
+(global-set-key [(hyper v)] 'yank)
+(global-set-key [(hyper c)] 'kill-ring-save)
+(global-set-key [(hyper s)] 'save-buffer)
+(global-set-key [(hyper l)] 'goto-line)
+(global-set-key [(hyper w)]
+                (lambda () (interactive) (delete-window)))
+(global-set-key [(hyper q)] 'save-buffers-kill-emacs)
+(global-set-key [(hyper z)] 'undo)
+
+(setq mac-pass-command-to-system t)
 ;; ------------------------
 ;; Use y and n for yes and no
 ;; ------------------------
