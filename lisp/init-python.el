@@ -47,6 +47,9 @@
 (require 'ein)
 (require 'ein-notebook)
 (require 'ein-subpackages)
+(require 'shackle)
+(setq shackle-rules '(("\\`\\*ein: .+?\\.ipynb\\*\\'" :regexp t :same t)))
+(shackle-mode)
 
 ;;; ------- Python flycheck -------------------
 (add-hook 'python-mode-hook

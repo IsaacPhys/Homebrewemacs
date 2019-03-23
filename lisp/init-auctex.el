@@ -27,6 +27,14 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
 (add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
 
+;; ========================================
+;; Disable Flycheck
+;; ========================================
+(setq flycheck-global-modes '(not LaTeX-mode latex-mode))
+
+;; ========================================
+;; RefTeX
+;; ========================================
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
 (add-hook 'latex-mode-hook 'turn-on-reftex)   ; with Emacs latex mode
 

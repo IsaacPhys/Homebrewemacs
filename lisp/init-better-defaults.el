@@ -17,6 +17,11 @@
 ;; Turn off autosave
 ;; ------------------------
 (setq auto-save-default nil)
+
+
+;; ========================================
+;; Set MacOS Keybindings
+;; ========================================
 (setq mac-option-modifier 'meta)
 (setq mac-command-modifier 'hyper)
 (global-set-key [(hyper a)] 'mark-whole-buffer)
@@ -29,7 +34,7 @@
 (global-set-key [(hyper q)] 'save-buffers-kill-emacs)
 (global-set-key [(hyper z)] 'undo)
 
-(setq mac-pass-command-to-system t)
+(setq mac-pass-command-to-system nil)
 ;; ------------------------
 ;; Use y and n for yes and no
 ;; ------------------------
@@ -98,10 +103,6 @@ Repeated invocations toggle between the two most recently open buffers."
 ;; Abbrev Definition
 ;; -----------------------
 (setq-default abbrev-mode t)
-(define-abbrev-table 'global-abbrev-table '(
-					    ;; Return
-					    ("ret" "return")
-					    ))
 
 ;; ----------------------
 ;; Hungry Delete
@@ -110,6 +111,8 @@ Repeated invocations toggle between the two most recently open buffers."
 (global-hungry-delete-mode)
 
 (setq flycheck-global-modes '(not LaTeX-mode latex-mode))
+
+(require 'transpose-frame)
 
 
 (provide 'init-better-defaults)

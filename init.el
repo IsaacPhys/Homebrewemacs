@@ -17,6 +17,7 @@
   (require 'init-minibuffer)
   (require 'init-spellcheck)
   (require 'init-python)
+  (require 'init-shackle)
   (require 'custom)
   (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
   )
