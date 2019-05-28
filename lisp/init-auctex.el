@@ -6,18 +6,14 @@
 ;; ========================================
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
-
-;; ========================================
-;; Latexmk
-;; ========================================
-(require 'auctex-latexmk)
-(auctex-latexmk-setup)
+(setq TeX-engine 'xetex)
 
 ;; ========================================
 ;; Company-Auctex
 ;; ========================================
 (require 'company-auctex)
 (company-auctex-init)
+
 
 ;; ========================================
 ;; CDLatex
@@ -27,10 +23,19 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
 (add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
 
+
 ;; ========================================
 ;; Disable Flycheck
 ;; ========================================
 (setq flycheck-global-modes '(not LaTeX-mode latex-mode))
+
+
+;; ========================================
+;; Latexmk
+;; ========================================
+(require 'auctex-latexmk)
+(auctex-latexmk-setup)
+
 
 ;; ========================================
 ;; RefTeX

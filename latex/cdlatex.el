@@ -535,7 +535,7 @@ Font-lock must be loaded as well to actually get fontified display."
   :group 'cdlatex-miscellaneous-configurations
   :type '(boolean))
 
-(defcustom cdlatex-paired-parens "$[{"
+(defcustom cdlatex-paired-parens "$[{("
   "*String with the opening parens you want to have inserted paired.
 The following parens are allowed here: `$([{|<'.
 I recommend to set this to '$[{' as these have syntactical meaning in

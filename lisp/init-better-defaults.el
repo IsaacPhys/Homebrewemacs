@@ -110,7 +110,7 @@ Repeated invocations toggle between the two most recently open buffers."
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
-(setq flycheck-global-modes '(not LaTeX-mode latex-mode))
+
 
 (require 'transpose-frame)
 

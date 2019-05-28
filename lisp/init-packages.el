@@ -21,7 +21,6 @@
 		      evil-matchit
 		      ;; --- Frame and Window ---
 		      shackle
-		      transpose-frame
 		      ;; --- Grammar Check ---
 		      flycheck
 		      ;; --- Hungry Delete ---

@@ -15,7 +15,7 @@
   :config
   (setq shackle-default-rule nil
         shackle-rules '(("\\`\\*ein: .+?\\.ipynb\\*\\'" :regexp t :same t)
-                        (flycheck-error-list-mode :align 'below :size 0.3)
+                        (flycheck-error-list-mode :align 'below :size 0.22)
 			(ein:run :align 'right :size 0.5)))
   (shackle-mode 1))
 

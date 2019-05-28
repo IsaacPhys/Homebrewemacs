@@ -10,6 +10,9 @@
 ;; Change cursor type 
 (setq-default cursor-type 'bar)
 
+;; Set Title Bar
+(setq frame-title-format "GNU Emacs")
+
 ;; Full Screen
 ;(toggle-frame-fullscreen)
 
