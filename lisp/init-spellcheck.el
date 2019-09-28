@@ -1,4 +1,4 @@
-(setq ispell-program-name "/usr/local/bin/aspell")
+(setq ispell-program-name "/usr/local/bin/ispell")
 
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
