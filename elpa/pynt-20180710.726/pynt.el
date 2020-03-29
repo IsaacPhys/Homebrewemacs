@@ -725,8 +725,8 @@ This involves creating a notebook if we haven't created one yet."
     (define-key map (kbd "C-c C-k") 'pynt-unpack)
     (define-key map (kbd "C-c C-n") 'pynt-goto-next-cell-line)
     (define-key map (kbd "C-c C-p") 'pynt-goto-prev-cell-line)
-    (define-key map (kbd "C-c <up>") 'pynt-next-cell-instance)
-    (define-key map (kbd "C-c <down>") 'pynt-prev-cell-instance)
+    (define-key map (kbd "<up>") 'pynt-next-cell-instance)
+    (define-key map (kbd "<down>") 'pynt-prev-cell-instance)
     map))
 
 ;;;###autoload

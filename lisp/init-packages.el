@@ -39,17 +39,19 @@
 		      ;projectile
 		      ;; --- Python ---
 		      company-jedi
-		      ein
+		     ; ein
 		      indent-tools
 		      jedi
 		      pynt
-		      pytest
+		     ; pytest
 		      yapfify
 		      ;; --- Spell Check ---
 		      flyspell-correct-popup
 		      ;; --- Themes ---
 		      doom-themes
 		      spacemacs-theme
+		      ;; --- Transpose Frame ---
+		      transpose-frame
 		      ;; --- Use Package ---
 		      use-package
 		      ) "Default packages")

@@ -41,22 +41,22 @@
     :hook (python-mode . yapf-mode))
 
 ;; ---- Pytest ------
-(require 'pytest)
+;(require 'pytest)
 ;
 ;;; Interactive Programming with IPython
-(require 'ein)
-(require 'ein-notebook)
-(require 'ein-subpackages)
-(require 'shackle)
-(setq shackle-rules '(("\\`\\*ein: .+?\\.ipynb\\*\\'" :regexp t :same t)))
-(shackle-mode)
+;(require 'ein)
+;(require 'ein-notebook)
+;(require 'ein-subpackages)
+;(require 'shackle)
+;(setq shackle-rules '(("\\`\\*ein: .+?\\.ipynb\\*\\'" :regexp t :same t)))
+;(shackle-mode)
 
 ;;; ------- Python flycheck -------------------
 (add-hook 'python-mode-hook
-          (lambda ()
-            (setq flycheck-python-pylint-executable "/usr/local/bin/pylint")
+         (lambda ()
+          (setq flycheck-python-pylint-executable "/usr/local/bin/pylint")
 	    (setq flycheck-python-flake8-executable "/usr/local/bin/flake8")
-            (setq flycheck-pylintrc "/home/tools/.pylintrc")))
+           (setq flycheck-pylintrc "/home/tools/.pylintrc")))
 
 (setq tab-width 4)
 (set-variable 'python-indent-offset 4)

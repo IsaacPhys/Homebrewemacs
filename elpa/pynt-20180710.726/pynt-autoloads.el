@@ -12,11 +12,6 @@
 (autoload 'pynt-mode "pynt" "\
 Minor mode for generating and interacting with jupyter notebooks via EIN
 
-If called interactively, enable Pynt mode if ARG is positive, and
-disable it if ARG is zero or negative.  If called from Lisp,
-also enable the mode if ARG is omitted or nil, and toggle it
-if ARG is `toggle'; disable the mode otherwise.
-
 \\{pynt-mode-map}
 
 \(fn &optional ARG)" t nil)
