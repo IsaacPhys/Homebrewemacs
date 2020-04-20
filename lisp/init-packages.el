@@ -25,6 +25,8 @@
 		      flycheck
 		      ;; --- Hungry Delete ---
 		      hungry-delete
+		      ;; --- Indent Guide ---
+		      highlight-indent-guides
 		      ;; --- LaTeX ---
 		      auctex
 		      auctex-latexmk
@@ -42,7 +44,7 @@
 		     ; ein
 		      indent-tools
 		      jedi
-		      pynt
+		      ;pynt
 		     ; pytest
 		      yapfify
 		      ;; --- Spell Check ---

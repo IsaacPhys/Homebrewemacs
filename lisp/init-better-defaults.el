@@ -110,6 +110,11 @@ Repeated invocations toggle between the two most recently open buffers."
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
+;; ----------------------
+;; Indent Guideline
+;; ----------------------
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(setq highlight-indent-guides-method 'character)
 
 
 (require 'transpose-frame)
