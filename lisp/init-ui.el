@@ -39,15 +39,15 @@
 ;; Font Set
 ;; -----------------------------------------------
 (add-to-list 'default-frame-alist
-             '(font . "Source Code Pro-16"))
-(set-frame-font "Source Code Pro-16")
+             '(font . "Fira Mono-12"))
+(set-frame-font "Fira Mono-12")
 ;;中文字体配置
 (if (display-graphic-p)
     (progn
       (dolist (charset '(kana han symbol cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font)
 			  charset
-			  (font-spec :family "STKaiti" :size 18)))))
+			  (font-spec :family "STKaiti" :size 14)))))
 
 ;;-----------------------------------------------
 ;; Modeline

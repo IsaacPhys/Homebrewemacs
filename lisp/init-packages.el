@@ -15,6 +15,7 @@
 		      swiper
 		      ;; --- Company Mode ---
 		      company
+		      company-auctex
 		      ;; --- Environment ---
 		      exec-path-from-shell
 		      ;; --- Evil-Matchit ---
